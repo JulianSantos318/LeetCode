@@ -10,7 +10,6 @@
           this.right = (right===undefined ? null : right)
       }
   }
- 
 
 function sortedArrayToBST(nums: number[]): TreeNode | null {
     //We'll use a two pointer algorithm to find the middle of the array, so we need to initialize the pointers at the start and end 
@@ -19,7 +18,9 @@ function sortedArrayToBST(nums: number[]): TreeNode | null {
     let end = nums.length - 1;
 
     //We'll use a recursive function to create the BST, we'll pass the start and end of the array
-    function createBST(start : number, end : number) : TreeNode | null {
+    // I use an arrow function to declare the recursive function, this improves memory usage and code readability
+    const createBST = (start: number, end: number): TreeNode | null => {
+        
         if (start > end) return null;  //If the start is greater than the end, we've reached the end of the array
         
         let mid = Math.floor((start + end) / 2); //We use Math.floor to round down so we can sure 'mid' is an integer. We find the middle of the array, w
