@@ -1,14 +1,14 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
+
+ // Definition for singly-linked list.
+  class ListNode {
+      val: number
+      next: ListNode | null
+      constructor(val?: number, next?: ListNode | null) {
+          this.val = (val===undefined ? 0 : val)
+          this.next = (next===undefined ? null : next)
+      }
+  }
+ 
 
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
     
@@ -19,7 +19,7 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 
 
     //We create a new node that will be the head of the result list for now, as this is a dummy node that will not be part of the result
-    let nodeResult = new ListNode();
+    let nodeResult : ListNode | null = new ListNode();
 
     //We create a pointer to the result node, this will help us to write the result list
     let iteratorResult = nodeResult;
